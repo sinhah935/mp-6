@@ -21,13 +21,7 @@ export default async function Home() {
         )}
         {user && (
             <div>
-                <Image
-                    src={user.image || ""}
-                    alt="user"
-                    width={80}
-                    height={80}
-                />
-
+                <img src={user.image ?? ""} alt="Users"/>
                 <p>{user.name}</p>
                 <p>{user.email}</p>
 
