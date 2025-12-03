@@ -1,4 +1,6 @@
 import { auth, signIn, signOut } from "@/auth"
+import Image from "next/image";
+
 
 export default async function Home() {
 
@@ -19,7 +21,13 @@ export default async function Home() {
         )}
         {user && (
             <div>
-                <img src={user.image} alt="user"/>
+                <Image
+                    src={user.image ?? ""}
+                    alt="user"
+                    width={80}
+                    height={80}
+                />
+
                 <p>{user.name}</p>
                 <p>{user.email}</p>
 
